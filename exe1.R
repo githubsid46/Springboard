@@ -3,10 +3,11 @@ library(dplyr,quietly = TRUE)
 library(tidyr, quietly = TRUE)
 library(WriteXLS, quietly = TRUE)
 
+#Remove previous any previous objects
 remove(refine)
+
 #Load Data into Data Frame
 refine <- read_xlsx("refine_original.xlsx")
-refine
 
 #TASK 1 - Clean up company name values to standard lowercase values
 refine$company <- tolower(refine$company)
